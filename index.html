@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Job Maps!</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 80%;
+      				width: 100%;
+      				position: relative }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCEa_PphdAyksZUYTdZ6-ewshqm_LbJMGQ&sensor=true"></script>
+    <script type="text/javascript" src="mapping.js"></script>
+    <!--<script type="text/javascript" src="https://gdc.indeed.com/ads/apiresults.js"></script>-->
+  </head>
+  
+  <body onload='initialize()'>
+    <div id="map_canvas"></div>
+    <div id="search"> 	
+		<!-- <form action='http://www.indeed.com/jobs' METHOD='GET'> -->
+		<form id="location" action=# onsubmit="return false">
+			<input type="hidden" name="indpubnum" value="1788752251438036">
+			<table cellspacing='0' style='font-family:arial'>
+				<tr>
+				    <td style='font-size:16px;color:#FF6600'><b>where</b></td>
+				    <td> </td>
+				</tr>
+				<tr>
+				    <td>
+				    	<input name='l' id='l' value='' size=''>
+				    </td>
+				    <td><input type='button' onclick='generateXMLq()' value='Find Jobs'></td></tr>
+				<tr>
+				    <td colspan='2'  valign='top' style='font-size:10px;padding:0px;margin:0px;border:0px;' >
+					    <table cellpadding='0' width='100%' style='padding:0px;margin:0px;border:0px;'>
+						    <tr>
+						    	<td valign='top' style='font-size:10px;padding:0px;margin:0px;border:0px;'>zip</td>
+						        <td style='font-size:13px' align='right'>
+						       		<span id=indeed_at><a href="http://www.indeed.com/?indpubnum=1788752251438036" style="text-decoration:none; color: #000">jobs</a> by <a href="http://www.indeed.com/?indpubnum=1788752251438036" title="Job Search"><img src="http://www.indeed.com/p/jobsearch.gif" style="border: 0;vertical-align: middle;" alt="job search"></a></span>
+						        </td>
+						    </tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>    	
+    </div>
+    <div id="xmltest">	
+    </div>
+  </body>
+</html>
